@@ -16,3 +16,16 @@ button:hover { background:#023e8a; }
   .nav-menu { flex-direction: column; display: none; width:100%; background:#005f73; }
   .nav-toggle { display:block; }
 }
+@media (max-width: 600px) {
+  /* Hide menu by default on small screens */
+  .nav-menu {
+    display: none;
+  }
+  /* Show menu when JS adds this class */
+  .nav-menu--visible {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    background: var(--clr-primary);
+  }
+}
