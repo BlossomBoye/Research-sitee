@@ -1,0 +1,277 @@
+/*--------------------------------------------------------------
+1. Variables & Reset
+--------------------------------------------------------------*/
+
+  /* Color Palette */
+:root {
+  --clr-neutral-dark:  #333333;
+  --clr-neutral-light: #F9F9F9;
+  --clr-accent:        #E76F51;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F9F7F3; /* Light Cream */
+  /* other properties... */
+}
+
+body {
+  font-family: var(--ff-base);
+  background-color: #F9F7F3;
+  color: var(--clr-text);
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+2. Layout Helpers
+--------------------------------------------------------------*/
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/*--------------------------------------------------------------
+3. Navbar
+--------------------------------------------------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--clr-primary);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 1rem;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  transition: color var(--transition);
+}
+
+.nav-menu a:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+4. Hero Section
+--------------------------------------------------------------*/
+.hero {
+  background: var(--clr-secondary);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--clr-secondary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+  background: var(--clr-highlight);
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+5. Section Headings & Typography
+--------------------------------------------------------------*/
+h1, h2 {
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/*--------------------------------------------------------------
+6. Form & Form Card
+--------------------------------------------------------------*/
+.form-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--ff-base);
+  transition: border-color var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+}
+
+button {
+  background: var(--clr-secondary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+button:hover {
+  background: var(--clr-highlight);
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+7. Links
+--------------------------------------------------------------*/
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--clr-secondary);
+}
+
+/*--------------------------------------------------------------
+8. Responsive: Mobile Menu
+--------------------------------------------------------------*/
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: var(--clr-primary);
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+
+    /* keep navbar text white */
+    .navbar .logo,
+    .navbar .nav-toggle,
+    .navbar .nav-menu a {
+      color: #fff !important;
+    }
+
+    .navbar {
+  background: rgba(255, 0, 0, 0.9);   /* bright red at 90% opacity */
+  /* keep your existing padding, box-shadow, etc. */
+}
+
+/* 2. Bold, semi-transparent text */
+.navbar .logo,
+.navbar .nav-menu a {
+  font-weight: 700;                  /* extra bold */
+  color: rgba(255, 255, 255, 0.85);  /* white at 85% opacity */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* subtle lift against red */
+}
+
+/* 3. On hover, make links fully opaque */
+.navbar .nav-menu a:hover {
+  color: #fff;                       /* full white on hover */
+}
+
+.navbar {
+  /* 1. Ensure it stretches edge-to-edge */
+  width: 100vw;             /* full viewport width */
+  box-sizing: border-box;   /* include padding in width */
+
+  /* 2. Increase vertical padding for a taller bar */
+  padding: 2rem 2rem;       /* 2rem top/bottom, 2rem left/right */
+
+  /* (Optional) fix any unwanted horizontal scroll */
+  margin-left: calc(-50vw + 50%);  
+  margin-right: calc(-50vw + 50%);
+}
+
+/* If you prefer an explicit height instead of padding: */
+/*
+.navbar {
+  height: 80px;
+  line-height: 80px;      /* vertically centers inline text */
+}
+
+/* Increase logo size */
+.navbar .logo {
+  font-size: 2.4rem;   /* was 2rem—adjust as you like */
+}
+
+/* Increase menu link size */
+.navbar .nav-menu a {
+  font-size: 1.4rem;   /* was 1.1rem—feel free to tweak */
+  padding: 0.75rem 1.75rem; /* a bit more horizontal breathing room */
+}
+
+/* Increase hamburger toggle size */
+.navbar .nav-toggle {
+  font-size: 2.6rem;   /* was 2.2rem */
+}

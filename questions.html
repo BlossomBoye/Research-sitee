@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questions • Research Site</title>
+
+  <!-- Your global CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page-specific styles -->
+<style>
+    body {
+      margin: 0;
+      background: #e0e0e0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 60px);
+      padding: 1rem;
+    }
+
+    /* ⬇️ Bigger, bold card */
+    .question-box {
+      background: #fff;
+      width: 600px;               /* increased width */
+      max-width: 95%;             /* responsive fallback */
+      padding: 3rem;            /* a bit more padding */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #000;
+      font-weight: bold;          /* make all text bold */
+    }
+
+    .question-box h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .question-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .question-box label {
+      color: #B00000;
+      font-size: 1rem;            /* slightly larger label */
+    }
+
+    .question-box input,
+    .question-box textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #000;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;          /* bold input text */
+    }
+
+    .question-box button {
+      background: #B00000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.85rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-weight: bold;          /* bold button text */
+    }
+    .question-box button:hover {
+      background: #800000;
+    }
+
+    /* keep navbar text white */
+    .navbar .logo,
+    .navbar .nav-toggle,
+    .navbar .nav-menu a {
+      color: #fff !important;
+    }
+
+    .navbar {
+  background: rgba(255, 0, 0, 0.9);   /* bright red at 90% opacity */
+  /* keep your existing padding, box-shadow, etc. */
+}
+
+/* 2. Bold, semi-transparent text */
+.navbar .logo,
+.navbar .nav-menu a {
+  font-weight: 700;                  /* extra bold */
+  color: rgba(255, 255, 255, 0.85);  /* white at 85% opacity */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* subtle lift against red */
+}
+
+/* 3. On hover, make links fully opaque */
+.navbar .nav-menu a:hover {
+  color: #fff;                       /* full white on hover */
+}
+
+.navbar {
+  /* 1. Ensure it stretches edge-to-edge */
+  width: 100vw;             /* full viewport width */
+  box-sizing: border-box;   /* include padding in width */
+
+  /* 2. Increase vertical padding for a taller bar */
+  padding: 2rem 2rem;       /* 2rem top/bottom, 2rem left/right */
+
+  /* (Optional) fix any unwanted horizontal scroll */
+  margin-left: calc(-50vw + 50%);  
+  margin-right: calc(-50vw + 50%);
+}
+
+/* If you prefer an explicit height instead of padding: */
+/*
+.navbar {
+  height: 80px;
+  line-height: 80px;      /* vertically centers inline text */
+}
+
+/* Increase logo size */
+.navbar .logo {
+  font-size: 2.4rem;   /* was 2rem—adjust as you like */
+}
+
+/* Increase menu link size */
+.navbar .nav-menu a {
+  font-size: 1.4rem;   /* was 1.1rem—feel free to tweak */
+  padding: 0.75rem 1.75rem; /* a bit more horizontal breathing room */
+}
+
+/* Increase hamburger toggle size */
+.navbar .nav-toggle {
+  font-size: 2.6rem;   /* was 2.2rem */
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">ResearchSite</a>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="questions.html">Questions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CENTERED CONTENT -->
+  <div class="content-wrapper">
+    <div class="question-box">
+      <h1>Have a Question?</h1>
+      <form id="questionForm"
+            action="https://formspree.io/f/xvgrakaa"
+            method="POST">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="hours of sleep">How many hours of sleep do you get on school nights?</label>
+        <input id="hours of sleep" type="text" name="How many hours of sleep do you get on school nights?" required>
+
+         <label for="Grade">What grade are you in?</label>
+        <input id="Grade" type="text" name="What grade are you in?" required>
+
+         <label for="hours of study">How many hours do you study per week?</label>
+        <input id="hours of study" type="text" name="How many hours do you study per week?" required>
+
+         <label for="Do you feel during school?">Do you feel tired during school? (Yes/No)</label>
+        <input id="Do you feel during school?" type="text" name="Do you feel tired during school? (Yes/No)" required>
+
+         <label for="Phone or TV">Do you use your phone or watch tv before bed</label>
+        <input id="Phone or TV" type="text" name="Do you use your phone or your tv before bed" required>
+
+         <label for="Sleep performance">Do you feel like your sleep affects your school performance? (Yes/No/Maybe)</label>
+        <input id="Sleep performance" type="text" name="Do you feel your sleep affect your school performance? (Yes/No/Maybe)" required>
+
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="_replyto" required>
+
+        <label for="message">Questions/Concerns (If you have any suggestions or resources)</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
