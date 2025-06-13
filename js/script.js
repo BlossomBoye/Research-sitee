@@ -1,8 +1,10 @@
-// Grab your toggle button and the menu
-const navToggle = document.getElementById('navToggle');
-const navMenu   = document.getElementById('navMenu');
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.getElementById('navToggle');
+  const navMenu   = document.getElementById('navMenu');
+  console.log('Menu toggle script loaded', { navToggle, navMenu });
 
-// On click, add or remove the "nav-menu--visible" class
-navToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('nav-menu--visible');
+  navToggle.addEventListener('click', () => {
+    console.log('Hamburger clicked');
+    navMenu.classList.toggle('nav-menu--visible');
+  });
 });
