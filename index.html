@@ -3,149 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home • Research Site</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>…Your Title…</title>
+  <title>Research Site • Results</title>
 
-  <!-- your existing CSS link -->
+  <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- add this internal style -->
+  <!-- Page-specific styles -->
   <style>
-  
-    /* keep navbar text white */
-    .navbar .logo,
-    .navbar .nav-toggle,
-    .navbar .nav-menu a {
-      color: #fff !important;
+    .survey-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
-
-    .navbar {
-  background: rgba(255, 0, 0, 0.9);   /* bright red at 90% opacity */
-  /* keep your existing padding, box-shadow, etc. */
-}
-
-/* 2. Bold, semi-transparent text */
-.navbar .logo,
-.navbar .nav-menu a {
-  font-weight: 700;                  /* extra bold */
-  color: rgba(255, 255, 255, 0.85);  /* white at 85% opacity */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* subtle lift against red */
-}
-
-/* 3. On hover, make links fully opaque */
-.navbar .nav-menu a:hover {
-  color: #fff;                       /* full white on hover */
-}
-
-.navbar {
-  /* 1. Ensure it stretches edge-to-edge */
-  width: 100vw;             /* full viewport width */
-  box-sizing: border-box;   /* include padding in width */
-
-  /* 2. Increase vertical padding for a taller bar */
-  padding: 2rem 2rem;       /* 2rem top/bottom, 2rem left/right */
-
-  /* (Optional) fix any unwanted horizontal scroll */
-  margin-left: calc(-50vw + 50%);  
-  margin-right: calc(-50vw + 50%);
-}
-
-/* If you prefer an explicit height instead of padding: */
-/*
-.navbar {
-  height: 80px;
-  line-height: 80px;      /* vertically centers inline text */
-}
-
-/* Increase logo size */
-.navbar .logo {
-  font-size: 2.4rem;   /* was 2rem—adjust as you like */
-}
-
-/* Increase menu link size */
-.navbar .nav-menu a {
-  font-size: 1.4rem;   /* was 1.1rem—feel free to tweak */
-  padding: 0.75rem 1.75rem; /* a bit more horizontal breathing room */
-}
-
-/* Increase hamburger toggle size */
-.navbar .nav-toggle {
-  font-size: 2.6rem;   /* was 2.2rem */
-}
+    .survey-container h2 {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .survey-chart {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    .survey-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .survey-table th,
+    .survey-table td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .survey-table thead {
+      background: #E76F51;
+      color: #fff;
+    }
+    .survey-table tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
   </style>
 </head>
-
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">ResearchSite</a>
-      <button class="nav-toggle" id="navToggle">☰</button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="questions.html">Questions</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="container">
-    <h1>Does Sleep Affect academic perfomance in teens?</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Hours of Sleep</th>
-      <th>Grade</th>
-      <th>Study Hours</th>
-      <th>Tired at School</th>
-      <th>Phone/TV Before Bed</th>
-      <th>Sleep Affects Performance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>7</td><td>8</td><td>4</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-    <tr><td>7</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>6</td><td>10</td><td>2</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>7</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>6</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>6</td><td>9</td><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>6</td><td>9</td><td>8–9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>8</td><td>10</td><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>7–8</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>7</td><td>10</td><td>4</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>8</td><td>10</td><td>2</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>8</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-    <tr><td>5–6.5</td><td>11</td><td>5</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>9–10</td><td>10</td><td>0</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>7</td><td>10</td><td>1</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>6–7</td><td>10</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>6</td><td>10</td><td>1</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>3–9</td><td>10</td><td>2–5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>At least 7</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>6–7</td><td>11</td><td>2</td><td>Yes</td><td>Sometimes</td><td>Yes</td></tr>
-    <tr><td>7.5</td><td>10</td><td>1.5</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-    <tr><td>8</td><td>9</td><td>3</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>7</td><td>10</td><td>1.5</td><td>Yes</td><td>No</td><td>Maybe</td></tr>
-    <tr><td>6</td><td>12</td><td>3</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-    <tr><td>6</td><td>11</td><td>9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>6.5</td><td>11</td><td>10</td><td>No</td><td>Yes</td><td>Maybe</td></tr>
-    <tr><td>7–8</td><td>9</td><td>2/3</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>7–8</td><td>11</td><td>5</td><td>No</td><td>No</td><td>Yes</td></tr>
-  </tbody>
-</table>
-    <section id="results">
-  <h2>Average Sleep by Grade</h2>
-  <img 
-    src="images/avg-sleep-by-grade.jpg" 
-    alt="Bar chart showing average sleep hours by grade" 
-    style="max-width:100%; height:auto;">
-</section>
-  </main>
+  <!-- your existing navbar here -->
+
+  <section class="survey-container">
+    <h2>Average Sleep by Grade</h2>
+    <img 
+      src="images/avg-sleep-by-grade.png" 
+      alt="Bar chart showing average sleep hours by grade" 
+      class="survey-chart">
+
+    <h2>Does Sleep Affect Academic Performance in Teens?</h2>
+    <table class="survey-table">
+      <thead>
+        <tr>
+          <th>Hours of Sleep</th>
+          <th>Grade</th>
+          <th>Study Hours</th>
+          <th>Tired at School</th>
+          <th>Phone/TV Before Bed</th>
+          <th>Sleep Affects Performance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>7</td><td>8</td><td>4</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>7</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>6</td><td>10</td><td>2</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>7</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>6</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>6</td><td>9</td><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>6</td><td>9</td><td>8–9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>8</td><td>10</td><td>5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>7–8</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>7</td><td>10</td><td>4</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>8</td><td>10</td><td>2</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>8</td><td>11</td><td>4</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>5–6.5</td><td>11</td><td>5</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>9–10</td><td>10</td><td>0</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>7</td><td>10</td><td>1</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>6–7</td><td>10</td><td>0</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>6</td><td>10</td><td>1</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>3–9</td><td>10</td><td>2–5</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>At least 7</td><td>9</td><td>0</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>6–7</td><td>11</td><td>2</td><td>Yes</td><td>Sometimes</td><td>Yes</td></tr>
+        <tr><td>7.5</td><td>10</td><td>1.5</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>8</td><td>9</td><td>3</td><td>Yes</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>7</td><td>10</td><td>1.5</td><td>Yes</td><td>No</td><td>Maybe</td></tr>
+        <tr><td>6</td><td>12</td><td>3</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>6</td><td>11</td><td>9</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>6.5</td><td>11</td><td>10</td><td>No</td><td>Yes</td><td>Maybe</td></tr>
+        <tr><td>7–8</td><td>9</td><td>2/3</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>7–8</td><td>11</td><td>5</td><td>No</td><td>No</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
 
   <script src="js/script.js"></script>
 </body>
