@@ -43,6 +43,69 @@
       background: #f9f9f9;
     }
   </style>
+    <style>
+  
+    /* keep navbar text white */
+    .navbar .logo,
+    .navbar .nav-toggle,
+    .navbar .nav-menu a {
+      color: #fff !important;
+    }
+
+    .navbar {
+  background: rgba(255, 0, 0, 0.9);   /* bright red at 90% opacity */
+  /* keep your existing padding, box-shadow, etc. */
+}
+
+/* 2. Bold, semi-transparent text */
+.navbar .logo,
+.navbar .nav-menu a {
+  font-weight: 700;                  /* extra bold */
+  color: rgba(255, 255, 255, 0.85);  /* white at 85% opacity */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* subtle lift against red */
+}
+
+/* 3. On hover, make links fully opaque */
+.navbar .nav-menu a:hover {
+  color: #fff;                       /* full white on hover */
+}
+
+.navbar {
+  /* 1. Ensure it stretches edge-to-edge */
+  width: 100vw;             /* full viewport width */
+  box-sizing: border-box;   /* include padding in width */
+
+  /* 2. Increase vertical padding for a taller bar */
+  padding: 2rem 2rem;       /* 2rem top/bottom, 2rem left/right */
+
+  /* (Optional) fix any unwanted horizontal scroll */
+  margin-left: calc(-50vw + 50%);  
+  margin-right: calc(-50vw + 50%);
+}
+
+/* If you prefer an explicit height instead of padding: */
+/*
+.navbar {
+  height: 80px;
+  line-height: 80px;      /* vertically centers inline text */
+}
+
+/* Increase logo size */
+.navbar .logo {
+  font-size: 2.4rem;   /* was 2rem—adjust as you like */
+}
+
+/* Increase menu link size */
+.navbar .nav-menu a {
+  font-size: 1.4rem;   /* was 1.1rem—feel free to tweak */
+  padding: 0.75rem 1.75rem; /* a bit more horizontal breathing room */
+}
+
+/* Increase hamburger toggle size */
+.navbar .nav-toggle {
+  font-size: 2.6rem;   /* was 2.2rem */
+}
+  </style>
 </head>
 <body>
 
