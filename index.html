@@ -15,7 +15,7 @@
       background: rgba(255,0,0,0.9);
       width: 100vw;
       box-sizing: border-box;
-      padding: 1rem 2rem;
+      padding: 2rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -34,6 +34,13 @@
     .navbar .nav-menu li + li {
       margin-left: 1rem;
     }
+      line-height: 80px;      /* vertically centers inline text */
+}
+
+/* Increase logo size */
+.navbar .logo {
+  font-size: 2.4rem;   /* was 2rem—adjust as you like */
+}
     .nav-toggle {
       display: none;
       font-size: 2rem;
@@ -118,14 +125,10 @@
   <!-- RESULTS CONTENT -->
   <section class="survey-container">
     <!-- Chart -->
-    <h2>Average Sleep by Grade</h2>
-    <img 
-      src="images/avg-sleep-by-grade.png" 
-      alt="Bar chart showing average sleep hours by grade" 
-      class="survey-chart">
+    
 
     <!-- Data Table -->
-    <h2>Does Sleep Affect Academic Performance in Teens?</h2>
+    <h1>Does Sleep Affect Academic Performance in Teens?</h1>
     <table class="survey-table">
       <thead>
         <tr>
